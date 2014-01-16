@@ -18,6 +18,7 @@
 @implementation ViewController {
     NSMutableData *_buffer;
     NSArray *_result;
+    NSString *_coffeeName;
 }
 - (IBAction)logIn:(id)sender {
     // The permissions requested from the user
@@ -40,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"count %d", _result.count);
+//    NSLog(@"count %d", _result.count);
     return _result.count;
 }
 
@@ -53,6 +54,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dic = _result[indexPath.row];
+    _coffeeName = [NSString stringWithFormat:@"%@(%@)", dic[@"name"], [dic[@"hotOrIced"] boolValue] ? @"Iced" : @"Hot"];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"주문" message:@"확인하세요" delegate:self cancelButtonTitle:@"취소" otherButtonTitles:@"주문", nil];
     [alert show];
 }
@@ -64,6 +67,7 @@
         // 요청을 발송한다
         // "https://api.parse.com/1/classes/Order"
         // 단순히 GET을 요청하는 것은 했지만
+        
         NSURL *url = [NSURL URLWithString:@"https://api.parse.com/1/classes/Order"];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url] ;
         [request addValue:@"T4JC47GMzVl5a19lIQokMxxE8Nx5WheSeptT8346" forHTTPHeaderField:@"X-Parse-Application-Id"];
@@ -75,7 +79,7 @@
         // NSDictionary를 요청 데이터로
         __autoreleasing NSError *error;
         NSDictionary *requestDic =
-        @{@"coffee": @"latte", @"orderer" : @"ias"};
+        @{@"coffee": _coffeeName, @"orderer" : @"충열"};
         NSData *postData = [NSJSONSerialization dataWithJSONObject:requestDic options:NSJSONWritingPrettyPrinted error:&error];
         [request setHTTPBody:postData];
         

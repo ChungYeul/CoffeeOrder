@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>906F2309-5B82-46D3-90FC-3C93FD580E25</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CoffeeOrder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FACB62DF-8F12-465F-A03C-5016BB2C8635</key>
+		<string>https://github.com/ChungYeul/CoffeeOrder.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CoffeeOrder.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FACB62DF-8F12-465F-A03C-5016BB2C8635</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ChungYeul/CoffeeOrder.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FACB62DF-8F12-465F-A03C-5016BB2C8635</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FACB62DF-8F12-465F-A03C-5016BB2C8635</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CoffeeOrder</string>
+		</dict>
+	</array>
+</dict>
+</plist>
